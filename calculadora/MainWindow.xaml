@@ -1,0 +1,150 @@
+﻿<Window x:Class="calculadora.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:calculadora"
+        mc:Ignorable="d"
+        Title="Calculadora" Height="550" Width="450" Background="Transparent" MinWidth="450" MinHeight="450" Foreground="#FFC4C4C4">
+
+    <!--Window.Resources>
+        <SolidColorBrush x:Key="btnNum" Color="black"/>
+        <SolidColorBrush x:Key="btnOp" Color="Orange"/>
+        <SolidColorBrush x:Key="btnPro" Color="DarkGray"/>
+        <SolidColorBrush x:Key="btnContent" Color="white"/>
+    </Window.Resources-->
+
+    <Grid Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="106*"/>
+            <ColumnDefinition Width="105*"/>
+            <ColumnDefinition Width="105*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="lbl_resultado" Content="0"
+               HorizontalAlignment="Right"
+               VerticalAlignment="Bottom"
+               Grid.RowSpan="1"
+               Grid.ColumnSpan="4"/>
+        
+        <Button x:Name="btn_ac" Content="AC"
+                Click="btn_ac_Click"
+                Style="{StaticResource btn_pro}"
+                Grid.Row="1"/>
+
+        <Button x:Name="btn_nove" Content="9"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="2"/>
+
+        <Button x:Name="btn_oito" Content="8"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="2"
+                Grid.Column="1"/>
+        
+        <Button x:Name="btn_sete" Content="7"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="2"
+                Grid.Column="2"/>
+
+        <Button x:Name="btn_seis" Content="6"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="3"/>
+
+        <Button x:Name="btn_cinco" Content="5"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="3"
+                Grid.Column="1"/>
+
+        <Button x:Name="btn_quatro"  Content="4"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="3"
+                Grid.Column="2"/>
+
+        <Button x:Name="btn_tres" Content="3"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="4"/>
+
+        <Button x:Name="btn_dois" Content="2"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="4"
+                Grid.Column="1"/>
+
+        <Button x:Name="btn_um" Content="1"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="4"
+                Grid.Column="2"/>
+
+
+        <Button x:Name="btn_negativo" Content="+ / -"
+                Click="btn_negativo_Click"
+                Style="{StaticResource btn_pro}"
+                Grid.Row="1"
+                Grid.Column="1"/>
+
+        <Button x:Name="btn_porcentagem" Content="%"
+                Click="btn_porcentagem_Click"
+                Style="{StaticResource btn_pro}"
+                Grid.Row="1"
+                Grid.Column="2"/>
+
+        <Button x:Name="btn_divisao" Content="/"
+                Click="btn_operacao_click"
+                Style="{StaticResource btn_op}"
+                Grid.Row="1"
+                Grid.Column="3"/>
+
+        <Button x:Name="btn_soma" Content="+"
+                Click="btn_operacao_click"
+                Style="{StaticResource btn_op}"
+                Grid.Row="2"
+                Grid.Column="3"/>
+
+        <Button x:Name="btn_subtracao" Content="-"
+                Click="btn_operacao_click"
+                Style="{StaticResource btn_op}"
+                Grid.Row="3"
+                Grid.Column="3"/>
+
+
+        <Button x:Name="btn_multiplicacao" Content="*"
+                Click="btn_operacao_click"
+                Style="{StaticResource btn_op}"
+                Grid.Row="4"
+                Grid.Column="3"/>
+
+        <Button x:Name="btn_zero" Content="0"
+                Click="btn_num"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="5"
+                Grid.ColumnSpan="2"/>
+
+        <Button x:Name="btn_ponto" Content="."
+                Click="btn_ponto_Click"
+                Style="{StaticResource btn_num_send}"
+                Grid.Row="5"
+                Grid.Column="2"/>
+
+        <Button x:Name="btn_calcula" Content="="
+                Click="btn_calcula_Click"
+                Style="{StaticResource btn_op}"
+                Grid.Row="5"
+                Grid.Column="3"/>
+    </Grid>
+</Window>
